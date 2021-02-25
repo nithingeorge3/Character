@@ -1,0 +1,14 @@
+//
+//  Staging.xcconfig
+//  Character
+//
+//  Created by Nitin George on 24/02/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME              = Character
+TARGET_NAME               = Character
+PRODUCT_BUNDLE_IDENTIFIER = com.gap.staging
+API_URL                   = https:/breakingbadapi.com/api
