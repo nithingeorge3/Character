@@ -59,7 +59,53 @@ class CharacterListVMTests: XCTestCase {
         let selectedCharacter = viewModel.fetchSelectedCharacter(selectedIndex: 0)
         XCTAssert(selectedCharacter?.name == "Walter White")
     }
-
+    
+    func testSearchCharacterDetail() {
+        _ = viewModel.searchCharacterByName(name: "Walter")
+        let character = viewModel.fetchSelectedCharacter(selectedIndex: 1)
+        XCTAssertTrue(character?.name == "Walter White Jr.")
+    }
+    
+    func testFilterCharacterDetail() {
+        _ = viewModel.fetchFilteredResult(appearanceID: [1])
+        let character = viewModel.fetchSelectedCharacter(selectedIndex: 0)
+        XCTAssertTrue(character?.name == "Walter White")
+    }
+    
+    func testEmptyFetchFilteredResult() {
+        let isFound = viewModel.fetchFilteredResult(appearanceID: [])
+        XCTAssertFalse(!isFound)
+    }
+    
+    func testFetchFilteredResult() {
+        let isFound = viewModel.fetchFilteredResult(appearanceID: [4,5])
+        XCTAssertTrue(isFound)
+    }
+    
+    func testFetchSelectedAppearanceID(){
+        _ = viewModel.fetchFilteredResult(appearanceID: [3,4])
+        guard let filteredIDs = viewModel.fetchSelectedAppearanceID() else {
+            XCTAssertNil(nil)
+            return
+        }
+        XCTAssertTrue(filteredIDs[0] == 3, "Success")
+    }
+    
+    func testFetchSeasonAppearanceList() {
+        guard let ids = viewModel.fetchSeasonAppearanceList() else {
+            XCTAssertNil(nil)
+            return
+        }
+        XCTAssert(ids == [1,2,3,4,5])
+    }
+    
+    func testErrorMessage() {
+        XCTAssertFalse(viewModel.searchCharacterByName(name: "XXXXXXXXXX"))
+        XCTAssertEqual(viewModel.errorMessage(), NSLocalizedString("NoCharacterSearchResult", comment: ""))
+        _ = viewModel.fetchFilteredResult(appearanceID: [100])
+        XCTAssertEqual(viewModel.errorMessage(), NSLocalizedString("NoCharacterFilterResult", comment: ""))
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

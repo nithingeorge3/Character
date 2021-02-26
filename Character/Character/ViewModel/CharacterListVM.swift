@@ -128,11 +128,11 @@ class CharacterListVM: CharacterListViewModelProtocol {
             return true
         }
         selectedAppearanceID = appearanceID
+        userFlow = .listFilterResult
         let _ = characterList?.filter { (character) -> Bool in
             for id in appearanceID {
                 let contain = character.appearance?.contains(where: { $0 == id })
                 if let found = contain, found {
-                    userFlow = .listFilterResult
                     lastSelectedUserFlow = .listFilterResult
                     filterCharacterList?.append(character)
                     return true

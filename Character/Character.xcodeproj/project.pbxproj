@@ -88,6 +88,9 @@
 		285F4DFD25E7FD69002B5188 /* ProfileNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F4DFB25E7FD69002B5188 /* ProfileNameTableViewCell.swift */; };
 		285F4E0325E81101002B5188 /* ProfileQuickStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F4E0225E81101002B5188 /* ProfileQuickStatusTableViewCell.swift */; };
 		285F4E0425E81101002B5188 /* ProfileQuickStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285F4E0225E81101002B5188 /* ProfileQuickStatusTableViewCell.swift */; };
+		28871DB625E87499005F881B /* CharacterViewCellVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28871DB525E87499005F881B /* CharacterViewCellVMTests.swift */; };
+		28871DBB25E876A4005F881B /* CharacterFilterVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28871DBA25E876A4005F881B /* CharacterFilterVMTests.swift */; };
+		28871DC025E87AF8005F881B /* CharacterDetailVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28871DBF25E87AF8005F881B /* CharacterDetailVMTests.swift */; };
 		28BBD48225E5B36400AF9D8A /* CharacterFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD48125E5B36400AF9D8A /* CharacterFilterVC.swift */; };
 		28BBD48325E5B36400AF9D8A /* CharacterFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD48125E5B36400AF9D8A /* CharacterFilterVC.swift */; };
 		28BBD48D25E5C78700AF9D8A /* CharacterFilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD48C25E5C78700AF9D8A /* CharacterFilterViewCell.swift */; };
@@ -164,6 +167,9 @@
 		285F4DF125E7F598002B5188 /* ProfilePhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoTableViewCell.swift; sourceTree = "<group>"; };
 		285F4DFB25E7FD69002B5188 /* ProfileNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameTableViewCell.swift; sourceTree = "<group>"; };
 		285F4E0225E81101002B5188 /* ProfileQuickStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuickStatusTableViewCell.swift; sourceTree = "<group>"; };
+		28871DB525E87499005F881B /* CharacterViewCellVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCellVMTests.swift; sourceTree = "<group>"; };
+		28871DBA25E876A4005F881B /* CharacterFilterVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterVMTests.swift; sourceTree = "<group>"; };
+		28871DBF25E87AF8005F881B /* CharacterDetailVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailVMTests.swift; sourceTree = "<group>"; };
 		28BBD48125E5B36400AF9D8A /* CharacterFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterVC.swift; sourceTree = "<group>"; };
 		28BBD48C25E5C78700AF9D8A /* CharacterFilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewCell.swift; sourceTree = "<group>"; };
 		28BBD49425E5CAD900AF9D8A /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
@@ -400,6 +406,9 @@
 			isa = PBXGroup;
 			children = (
 				2849D7EA25E5462F0017F265 /* CharacterListVMTests.swift */,
+				28871DB525E87499005F881B /* CharacterViewCellVMTests.swift */,
+				28871DBA25E876A4005F881B /* CharacterFilterVMTests.swift */,
+				28871DBF25E87AF8005F881B /* CharacterDetailVMTests.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -630,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2848944925E4224200DB7426 /* APICharacterProtocol.swift in Sources */,
+				28871DC025E87AF8005F881B /* CharacterDetailVMTests.swift in Sources */,
 				284893FC25E4163800DB7426 /* AppDelegate.swift in Sources */,
 				2848946B25E422EE00DB7426 /* CharacterListVM.swift in Sources */,
 				285F4D8325E7A5D9002B5188 /* CharacterFilterVM.swift in Sources */,
@@ -653,11 +663,13 @@
 				2849D7E425E546160017F265 /* CharacterServicesMock.swift in Sources */,
 				28BBD48E25E5C78700AF9D8A /* CharacterFilterViewCell.swift in Sources */,
 				28BBD48325E5B36400AF9D8A /* CharacterFilterVC.swift in Sources */,
+				28871DB625E87499005F881B /* CharacterViewCellVMTests.swift in Sources */,
 				284894A625E44CFA00DB7426 /* CharacterViewCell.swift in Sources */,
 				284893D325E4125E00DB7426 /* Helper.swift in Sources */,
 				284894CD25E45A6200DB7426 /* ServiceRequest.swift in Sources */,
 				284893C625E4121F00DB7426 /* AppRouter.swift in Sources */,
 				2848940625E4163F00DB7426 /* CharacterListVC.swift in Sources */,
+				28871DBB25E876A4005F881B /* CharacterFilterVMTests.swift in Sources */,
 				285F4D7C25E7A4A0002B5188 /* CharacterFilterCellVMProtocol.swift in Sources */,
 				2848944F25E4224200DB7426 /* CharacterListViewModelProtocol.swift in Sources */,
 				285F4E0425E81101002B5188 /* ProfileQuickStatusTableViewCell.swift in Sources */,
