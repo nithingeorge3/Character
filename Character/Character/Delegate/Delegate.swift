@@ -19,7 +19,7 @@ public protocol CharacterFilterViewCellDelegate :AnyObject {
     func checkMarkUnSelected(_ sender: UIButton)
 }
 
-public protocol ProfilePhotoTableViewCellDelegate : AnyObject {
+public protocol ProfilePhotoViewCellDelegate : AnyObject {
     func coverImageViewTappedTapped()
     func profileImageTapped()
 }
