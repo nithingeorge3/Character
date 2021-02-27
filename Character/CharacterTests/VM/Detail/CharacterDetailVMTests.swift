@@ -21,12 +21,11 @@ class CharacterDetailVMTests: XCTestCase {
     }
 
     func testNumberOfSections() {
-        XCTAssertTrue(viewModel.numberOfSections() == 2)
+        XCTAssertTrue(viewModel.numberOfSections() == 1)
     }
     
     func testNumberOfRowSections() {
-        XCTAssertTrue(viewModel.numberOfRows(section: 0) == 2)
-        XCTAssertTrue(viewModel.numberOfRows(section: 1) == viewModel.fetchOccupationCount())
+        XCTAssertTrue(viewModel.numberOfRows(section: 0) == 9)
     }
     
     func testFetchNavigationTitle() {
@@ -37,17 +36,11 @@ class CharacterDetailVMTests: XCTestCase {
         let url = viewModel.fetchCharactreImageURL()
         XCTAssertTrue(url == URL("https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"))
     }
-    
-    func testFetchCharacterName() {
-        XCTAssertTrue(viewModel.fetchCharacterName() == "George")
-        XCTAssertEqual(viewModel.fetchCharacterNickname(), "Geo")
-        XCTAssert(viewModel.fetchCharacterNameAndNickName().string == "George (Geo)")
-    }
+
     func testPersonalInfo() {
+        XCTAssertTrue(viewModel.fetchCharacterName() == "George")
         XCTAssert(viewModel.fetchCharacterBirthday() == "07-08-1993")
         XCTAssertEqual(viewModel.fetchCharacterStatus(), "Alive")
-        XCTAssertNil(viewModel.fetchCharacterOccupation(index: 100))
-        XCTAssertTrue(viewModel.fetchCharacterOccupation(index: 0) == "Teenager")
         let currentCharacter = viewModel.readSelectedCharacter()
         XCTAssert(currentCharacter?.name == "George")
     }

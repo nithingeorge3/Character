@@ -110,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfilePhotoTableViewCell" rowHeight="300" id="1X5-Up-sdb" customClass="ProfilePhotoTableViewCell" customModule="Character" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfilePhotoViewCell" rowHeight="300" id="1X5-Up-sdb" customClass="ProfilePhotoViewCell" customModule="Character" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="428" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1X5-Up-sdb" id="VXH-t3-TEu">
@@ -168,7 +168,7 @@
                                             <outlet property="profileImageView" destination="dTF-Tv-5Wl" id="308-b8-GeL"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileNameTableViewCell" rowHeight="43.666667938232422" id="Or4-Rj-fIb" customClass="ProfileNameTableViewCell" customModule="Character" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileNameViewCell" rowHeight="43.666667938232422" id="Or4-Rj-fIb" customClass="ProfileNameViewCell" customModule="Character" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="328" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Or4-Rj-fIb" id="LbW-RH-wv9">
@@ -193,7 +193,7 @@
                                             <outlet property="nameLbl" destination="S4H-eK-Amg" id="W3P-W9-4Sy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileQuickStatusTableViewCell" rowHeight="43.666667938232422" id="PJU-VV-Y0f" customClass="ProfileQuickStatusTableViewCell" customModule="Character" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileQuickStatusViewCell" rowHeight="43.666667938232422" id="PJU-VV-Y0f" customClass="ProfileQuickStatusViewCell" customModule="Character" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="371.66666793823242" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PJU-VV-Y0f" id="05N-yw-yZ3">

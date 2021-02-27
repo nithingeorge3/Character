@@ -62,44 +62,45 @@ extension CharacterDetailVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = UITableViewCell()
-        switch indexPath.section {
-        case 0:
-            cell = indexPath.row == 0 ? loadProfilePhotoTableViewCell(indexPath: indexPath) : loadProfileNameTableViewCell(indexPath: indexPath)
-        case 1:
-            cell = loadProfileQuickStatusTableViewCell(indexPath: indexPath)
-        default:
-            return cell
+        let cellType = viewModel.cellType(forIndex: indexPath)
+        switch cellType {
+        case .photoCell(let model):
+            return cellForPhotoViewCell(indexPath: indexPath, viewModel: model)
+        case .nameCell(model: let model):
+            return cellForNameViewCell(indexPath: indexPath, viewModel: model)
+        case .quickStatusCell(type: let statusCellType, model: let model):
+            return cellForQuickStatusViewCell(indexPath: indexPath, type: statusCellType, viewModel: model)
+
         }
-        return cell
     }
     
     // MARK: - Load Custom Cells
-    func loadProfilePhotoTableViewCell(indexPath: IndexPath) -> ProfilePhotoTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhotoTableViewCell", for:indexPath) as! ProfilePhotoTableViewCell
+    func cellForPhotoViewCell(indexPath: IndexPath, viewModel: ProfilePhotoViewCellVMProtocol) -> ProfilePhotoViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhotoViewCell", for:indexPath) as! ProfilePhotoViewCell
         cell.selectionStyle = .none
         cell.delegate = self
-        cell.profileImageView.sd_setImage(with: viewModel.fetchCharactreImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
+        cell.prepareCell(viewModel: viewModel as! ProfilePhotoViewCellVM)
         return cell
     }
     
-    func loadProfileNameTableViewCell(indexPath: IndexPath) -> ProfileNameTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameTableViewCell", for:indexPath) as! ProfileNameTableViewCell
+    func cellForNameViewCell(indexPath: IndexPath, viewModel: ProfileNameViewCellVMProtocol) -> ProfileNameViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameViewCell", for:indexPath) as! ProfileNameViewCell
         cell.selectionStyle = .none
-        cell.nameLbl.attributedText = viewModel.fetchCharacterNameAndNickName()
+        cell.prepareCell(viewModel: viewModel as! ProfileNameViewCellVM)
         return cell
     }
     
-    func loadProfileQuickStatusTableViewCell(indexPath: IndexPath) -> ProfileQuickStatusTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileQuickStatusTableViewCell", for:indexPath) as! ProfileQuickStatusTableViewCell
+    func cellForQuickStatusViewCell(indexPath: IndexPath, type: CharacterDetailQuickStatusCellType, viewModel: ProfileQuickStatusViewCellVMProtocol) -> ProfileQuickStatusViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileQuickStatusViewCell", for:indexPath) as! ProfileQuickStatusViewCell
         cell.selectionStyle = .none
-        cell.statusLbl.text = viewModel.fetchCharacterOccupation(index: indexPath.row)
+        cell.tag = indexPath.row
+        cell.prepareCell(viewModel: viewModel as! ProfileQuickStatusViewCellVM)
         return cell
     }
 }
 
 // MARK: Button Actions
-extension CharacterDetailVC: ProfilePhotoTableViewCellDelegate {
+extension CharacterDetailVC: ProfilePhotoViewCellDelegate {
 
     func coverImageViewTappedTapped() {
     }

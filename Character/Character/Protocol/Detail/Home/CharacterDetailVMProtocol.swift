@@ -9,16 +9,14 @@ import UIKit
 
 protocol CharacterDetailVMProtocol {
     func fetchNavigationTitle() -> String?
+    func cellType(forIndex indexPath: IndexPath)-> CharacterHomeTableCellType
     func numberOfSections() -> Int
     func numberOfRows(section: Int) -> Int
-    func fetchCharactreImageURL() -> URL?
     func fetchCharacterName() -> String?
-    func fetchCharacterNickname() -> String?
-    func fetchCharacterNameAndNickName() -> NSMutableAttributedString
+    func fetchCharactreImageURL() -> URL?
     func fetchCharacterBirthday() -> String?
     func fetchCharacterStatus() -> String?
     func fetchOccupationCount() -> Int
-    func fetchCharacterOccupation(index: Int) -> String?
+    func fetchAppearanceCount() -> Int
     func readSelectedCharacter() -> Character?
 }
-

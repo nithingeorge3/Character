@@ -20,7 +20,6 @@ class CharacterImageVM: CharacterImageVMProtocol {
             return nil
         }
         let url = [URL(imageURL)]
-        print(url)
         return url
     }
 }

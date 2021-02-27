@@ -109,11 +109,9 @@ extension CharacterListVC: UICollectionViewDataSource, UICollectionViewDelegate 
 }
 
 extension CharacterListVC: UISearchBarDelegate {
-    
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true
     }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let resultFound = viewModel.searchCharacterByName(name: searchText)
         collectionView.setNoContentText(to:"")
@@ -128,7 +126,6 @@ extension CharacterListVC: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
 }
-
 
 // MARK: Button Actions
 extension CharacterListVC: CharacterFilterVCDelegate {

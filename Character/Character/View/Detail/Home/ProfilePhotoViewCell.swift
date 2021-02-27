@@ -1,5 +1,5 @@
 //
-//  ProfilePhotoTableViewCell.swift
+//  ProfilePhotoViewCell.swift
 //  Character
 //
 //  Created by Nitin George on 25/02/2021.
@@ -7,23 +7,29 @@
 
 import UIKit
 
-class ProfilePhotoTableViewCell: UITableViewCell {
+class ProfilePhotoViewCell: UITableViewCell {
     
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    weak var delegate: ProfilePhotoTableViewCellDelegate? = nil
+    private var viewModel: ProfilePhotoViewCellVMProtocol!
+    weak var delegate: ProfilePhotoViewCellDelegate? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initUI()
+//        initUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
-    func initUI() {
+    func prepareCell(viewModel: ProfilePhotoViewCellVM) {
+        self.viewModel = viewModel
+        setUpUI()
+    }
+    
+    func setUpUI() {
         coverImageView.isUserInteractionEnabled = true
         coverImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(coverImageViewTapped(tapGestureRecognizer:))))
         profileImageView.isUserInteractionEnabled = true
@@ -32,7 +38,10 @@ class ProfilePhotoTableViewCell: UITableViewCell {
         profileImageView.layer.borderWidth = 1.0
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
+        
+        profileImageView.sd_setImage(with: viewModel.fetchCharactreImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
     }
+    
     
     @objc func coverImageViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         delegate?.coverImageViewTappedTapped()
