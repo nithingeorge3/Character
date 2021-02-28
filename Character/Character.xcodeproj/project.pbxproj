@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2818D9D725EC2A8F00F30E5A /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818D9D625EC2A8F00F30E5A /* APIServices.swift */; };
+		2818D9D825EC2A8F00F30E5A /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818D9D625EC2A8F00F30E5A /* APIServices.swift */; };
+		2818D9F525EC31B600F30E5A /* CharacterImageVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818D9F425EC31B600F30E5A /* CharacterImageVMTests.swift */; };
 		2842623825E9A57A0067E43D /* ProfilePhotoViewCellVMTets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842623725E9A57A0067E43D /* ProfilePhotoViewCellVMTets.swift */; };
 		2842623D25E9A5870067E43D /* ProfileNameViewCellVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842623C25E9A5870067E43D /* ProfileNameViewCellVMTests.swift */; };
 		2842624225E9A5950067E43D /* ProfileQuickStatusViewCellVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842624125E9A5950067E43D /* ProfileQuickStatusViewCellVMTests.swift */; };
@@ -134,6 +137,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2818D9D625EC2A8F00F30E5A /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		2818D9F425EC31B600F30E5A /* CharacterImageVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageVMTests.swift; sourceTree = "<group>"; };
 		2842623725E9A57A0067E43D /* ProfilePhotoViewCellVMTets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewCellVMTets.swift; sourceTree = "<group>"; };
 		2842623C25E9A5870067E43D /* ProfileNameViewCellVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameViewCellVMTests.swift; sourceTree = "<group>"; };
 		2842624125E9A5950067E43D /* ProfileQuickStatusViewCellVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuickStatusViewCellVMTests.swift; sourceTree = "<group>"; };
@@ -226,6 +231,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2818D9F225EC318A00F30E5A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				28871DBF25E87AF8005F881B /* CharacterDetailVMTests.swift */,
+				2842623725E9A57A0067E43D /* ProfilePhotoViewCellVMTets.swift */,
+				2842623C25E9A5870067E43D /* ProfileNameViewCellVMTests.swift */,
+				2842624125E9A5950067E43D /* ProfileQuickStatusViewCellVMTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2818D9F325EC319400F30E5A /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2818D9F425EC31B600F30E5A /* CharacterImageVMTests.swift */,
+			);
+			path = ImageDetail;
+			sourceTree = "<group>";
+		};
 		2842623425E9A51E0067E43D /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +262,8 @@
 		2842623525E9A5280067E43D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				28871DBF25E87AF8005F881B /* CharacterDetailVMTests.swift */,
-				2842623725E9A57A0067E43D /* ProfilePhotoViewCellVMTets.swift */,
-				2842623C25E9A5870067E43D /* ProfileNameViewCellVMTests.swift */,
-				2842624125E9A5950067E43D /* ProfileQuickStatusViewCellVMTests.swift */,
+				2818D9F225EC318A00F30E5A /* Home */,
+				2818D9F325EC319400F30E5A /* ImageDetail */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -431,6 +453,7 @@
 		284894CA25E45A4C00DB7426 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
+				2818D9D625EC2A8F00F30E5A /* APIServices.swift */,
 				284894CB25E45A6200DB7426 /* ServiceRequest.swift */,
 			);
 			path = NetworkServices;
@@ -772,6 +795,7 @@
 				284893B125E4111100DB7426 /* AppConfiguration.swift in Sources */,
 				285F4DFC25E7FD69002B5188 /* ProfileNameViewCell.swift in Sources */,
 				28BBD49525E5CAD900AF9D8A /* Delegate.swift in Sources */,
+				2818D9D725EC2A8F00F30E5A /* APIServices.swift in Sources */,
 				28BBD48225E5B36400AF9D8A /* CharacterFilterVC.swift in Sources */,
 				2848944E25E4224200DB7426 /* CharacterListViewModelProtocol.swift in Sources */,
 				28BBD48D25E5C78700AF9D8A /* CharacterFilterViewCell.swift in Sources */,
@@ -802,6 +826,7 @@
 				289C021325E9452C0006CA39 /* ProfileQuickStatusViewCellVM.swift in Sources */,
 				289C022025E945850006CA39 /* ProfilePhotoViewCellVMProtocol.swift in Sources */,
 				28871DC025E87AF8005F881B /* CharacterDetailVMTests.swift in Sources */,
+				2818D9D825EC2A8F00F30E5A /* APIServices.swift in Sources */,
 				284893FC25E4163800DB7426 /* AppDelegate.swift in Sources */,
 				2848946B25E422EE00DB7426 /* CharacterListVM.swift in Sources */,
 				285F4D8325E7A5D9002B5188 /* CharacterFilterVM.swift in Sources */,
@@ -814,6 +839,7 @@
 				285F4D8D25E7A5EA002B5188 /* CharacterFilterVMProtocol.swift in Sources */,
 				2848940125E4163A00DB7426 /* SceneDelegate.swift in Sources */,
 				28BBD49625E5CAD900AF9D8A /* Delegate.swift in Sources */,
+				2818D9F525EC31B600F30E5A /* CharacterImageVMTests.swift in Sources */,
 				2842623D25E9A5870067E43D /* ProfileNameViewCellVMTests.swift in Sources */,
 				285C216925E83C8D00751CFA /* CharacterImageVM.swift in Sources */,
 				2848938825E410BD00DB7426 /* CharacterTests.swift in Sources */,

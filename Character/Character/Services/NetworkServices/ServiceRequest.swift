@@ -5,7 +5,6 @@
 //  Created by Nitin George on 24/02/2021.
 //
 
-//import Foundation
 import Alamofire
 
 struct ServiceRequest {

@@ -29,7 +29,7 @@ class CharacterFilterVMTests: XCTestCase {
         viewModel.checkMarkSelected(id: 1)
         let ids = viewModel.fetchAllSelectedIds()
         guard let myIds = ids else {
-            XCTAssertNil(nil)
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(myIds.count > 0)
@@ -40,7 +40,7 @@ class CharacterFilterVMTests: XCTestCase {
         viewModel.checkMarkUnSelected(id: 1)
         let ids = viewModel.fetchAllSelectedIds()
         guard let myIds = ids else {
-            XCTAssertNil(nil)
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(myIds.count == 0)
