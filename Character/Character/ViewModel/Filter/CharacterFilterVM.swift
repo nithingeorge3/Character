@@ -38,7 +38,7 @@ class CharacterFilterVM: CharacterFilterVMProtocol {
     func fetchFilterOptionID(index: Int) -> Int {
         return seasonAppearanceList?[index] ?? 0
     }
-    func fetchFilterOptionText(index: Int) -> String {
+    func fetchAppearance(index: Int) -> String {
         return "\(seasonAppearanceList?[index] ?? 0)"
     }
     

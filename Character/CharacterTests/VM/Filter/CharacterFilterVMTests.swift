@@ -62,8 +62,8 @@ class CharacterFilterVMTests: XCTestCase {
         XCTAssertTrue(id == 2)
     }
     
-    func testFetchFilterOptionString() {
-        let id = viewModel.fetchFilterOptionText(index: 1)
+    func testFetchAppearance() {
+        let id = viewModel.fetchAppearance(index: 1)
         XCTAssertTrue(id == "2")
     }
     

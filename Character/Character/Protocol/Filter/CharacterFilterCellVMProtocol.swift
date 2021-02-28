@@ -9,4 +9,5 @@
 import UIKit
 
 protocol CharacterFilterCellVMProtocol {
+//    func fetchCharacterAppearance() -> String?
 }
