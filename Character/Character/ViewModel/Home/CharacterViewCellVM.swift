@@ -15,7 +15,7 @@ class CharacterViewCellVM: CharacterViewCellVMProtocol {
         self.character = character
     }
     
-    func fetchCharactreImageURL() -> URL? {
+    func fetchCharacterImageURL() -> URL? {
         return URL(string: character?.img ?? "")
     }
     

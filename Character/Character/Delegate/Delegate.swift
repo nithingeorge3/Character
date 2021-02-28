@@ -6,20 +6,18 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 
-public protocol CharacterFilterVCDelegate :AnyObject {
+public protocol CharacterFilterVCDelegate: class {
     func doneButtonTouched(appearanceID: [Int]?)
 }
 
-public protocol CharacterFilterViewCellDelegate :AnyObject {
+public protocol CharacterFilterViewCellDelegate: class {
     func checkMarkSelected(_ sender: UIButton)
     func checkMarkUnSelected(_ sender: UIButton)
 }
 
-public protocol ProfilePhotoViewCellDelegate : AnyObject {
+public protocol ProfilePhotoViewCellDelegate: class {
     func coverImageViewTappedTapped()
     func profileImageTapped()
 }

@@ -13,7 +13,7 @@ protocol CharacterDetailVMProtocol {
     func numberOfSections() -> Int
     func numberOfRows(section: Int) -> Int
     func fetchCharacterName() -> String?
-    func fetchCharactreImageURL() -> URL?
+    func fetchCharacterImageURL() -> URL?
     func fetchCharacterBirthday() -> String?
     func fetchCharacterStatus() -> String?
     func fetchOccupationCount() -> Int

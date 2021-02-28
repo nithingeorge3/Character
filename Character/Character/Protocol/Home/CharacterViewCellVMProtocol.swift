@@ -8,6 +8,6 @@
 import UIKit
 
 protocol CharacterViewCellVMProtocol {
-    func fetchCharactreImageURL() -> URL?
+    func fetchCharacterImageURL() -> URL?
     func fetchCharacterName() -> String?
 }

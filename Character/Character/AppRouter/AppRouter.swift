@@ -34,9 +34,9 @@ final class AppRouter {
         }
     }
     
-    static func presentCharacterFilterView(delegate: AnyObject, appearanceList: [Int]?, selectedAppearanceID: [Int]?) {
+    static func presentCharacterFilterView(delegate: CharacterFilterVCDelegate, appearanceList: [Int]?, selectedAppearanceID: [Int]?) {
         if let filterVC = sb?.instantiateViewController(withIdentifier: "CharacterFilterVC") as? CharacterFilterVC, let appearanceList = appearanceList  {
-            filterVC.delegate = (delegate as! CharacterFilterVCDelegate)
+            filterVC.delegate = delegate
             filterVC.prepareModel(viewModel: CharacterFilterVM(seasonAppearanceList: appearanceList, selectedID: selectedAppearanceID))
             (delegate as! CharacterListVC).present(filterVC, animated: true, completion: nil)
         }

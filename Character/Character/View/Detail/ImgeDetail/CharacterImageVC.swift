@@ -30,6 +30,6 @@ class CharacterImageVC: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: false)
     }
 }

@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ProfilePhotoViewCellVMProtocol {
-    func fetchCharactreImageURL() -> URL?
+    func fetchCharacterImageURL() -> URL?
 }

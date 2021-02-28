@@ -32,8 +32,8 @@ class CharacterDetailVMTests: XCTestCase {
         XCTAssertEqual(viewModel.fetchNavigationTitle(), "\(NSLocalizedString("CharacterDetailTitle", comment: ""))")
     }
     
-    func testFetchCharactreImageURL() {
-        let url = viewModel.fetchCharactreImageURL()
+    func testFetchCharacterImageURL() {
+        let url = viewModel.fetchCharacterImageURL()
         XCTAssertTrue(url == URL("https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"))
     }
 

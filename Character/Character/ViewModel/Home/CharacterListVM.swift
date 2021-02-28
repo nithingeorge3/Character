@@ -120,7 +120,7 @@ class CharacterListVM: CharacterListViewModelProtocol {
         return Array(result).sorted()
     }
     
-    func fetchFilteredResult(appearanceID: [Int]?) -> Bool {
+    func fetchCharacterSeasonResult(appearanceID: [Int]?) -> Bool { 
         filterCharacterList?.removeAll()
         selectedAppearanceID?.removeAll()
         guard let appearanceID = appearanceID, appearanceID.count > 0 else {

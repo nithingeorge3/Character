@@ -17,7 +17,6 @@ class ProfilePhotoViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        initUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,8 +37,7 @@ class ProfilePhotoViewCell: UITableViewCell {
         profileImageView.layer.borderWidth = 1.0
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
-        
-        profileImageView.sd_setImage(with: viewModel.fetchCharactreImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
+        profileImageView.sd_setImage(with: viewModel.fetchCharacterImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
     }
     
     

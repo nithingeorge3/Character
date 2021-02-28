@@ -60,7 +60,7 @@ class CharacterDetailVM: CharacterDetailVMProtocol {
         return character?.name
     }
     
-    func fetchCharactreImageURL() -> URL? {
+    func fetchCharacterImageURL() -> URL? {
         return URL(string: character?.img ?? "")
     }
     
@@ -81,10 +81,8 @@ class CharacterDetailVM: CharacterDetailVMProtocol {
         tableDataSource.append(cellTypeForPhotoCell())
         tableDataSource.append(cellTypeForNameCell())
         let occupationCount = fetchOccupationCount()
-        if  occupationCount > 0 {
-            for _ in 1...occupationCount {
-                tableDataSource.append(cellTypeForQuickStatusCell(cellType: .occupation))
-            }
+        for _ in 0..<occupationCount {
+            tableDataSource.append(cellTypeForQuickStatusCell(cellType: .occupation))
         }
         if let birthDay = character?.birthday, birthDay.count > 0 {
             tableDataSource.append(cellTypeForQuickStatusCell(cellType: .birthday))
@@ -93,10 +91,8 @@ class CharacterDetailVM: CharacterDetailVMProtocol {
             tableDataSource.append(cellTypeForQuickStatusCell(cellType: .status))
         }
         let appearanceCount = fetchAppearanceCount()
-        if appearanceCount > 0 {
-            for _ in 1...appearanceCount {
-                tableDataSource.append(cellTypeForQuickStatusCell(cellType: .appearance))
-            }
+        for _ in 0..<appearanceCount {
+            tableDataSource.append(cellTypeForQuickStatusCell(cellType: .appearance))
         }
     }
     
