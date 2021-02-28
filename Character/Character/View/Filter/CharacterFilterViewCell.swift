@@ -11,6 +11,7 @@ class CharacterFilterViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectionButton: UIButton!
+    @IBOutlet weak var bottomSeparator: UIView!
     
     weak var delegate: CharacterFilterViewCellDelegate? = nil
     

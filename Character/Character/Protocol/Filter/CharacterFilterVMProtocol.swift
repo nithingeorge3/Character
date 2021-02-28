@@ -13,6 +13,6 @@ protocol CharacterFilterVMProtocol {
     func checkMarkUnSelected(id: Int)
     func fetchAllSelectedIds() -> [Int]?
     func fetchFilterOptionID(index: Int) -> Int
-    func fetchFilterOptionText(index: Int) -> String
+    func fetchAppearance(index: Int) -> String
     func fetchSelectedStatus(indexAppearanceID: Int) -> Bool
 }
