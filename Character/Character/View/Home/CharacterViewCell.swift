@@ -20,7 +20,7 @@ class CharacterViewCell: UICollectionViewCell {
     }
 
     private func setUpUI() {
-        profileImageView.sd_setImage(with: viewModel.fetchCharactreImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
+        profileImageView.sd_setImage(with: viewModel.fetchCharacterImageURL(), placeholderImage: UIImage(named: "unique_Avatar.png"))
         nameLabel.text = viewModel.fetchCharacterName() ?? ""
     }
 }

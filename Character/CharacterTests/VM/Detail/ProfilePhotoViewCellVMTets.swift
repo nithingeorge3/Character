@@ -21,7 +21,7 @@ class ProfilePhotoViewCellVMTets: XCTestCase {
     }
 
     func testCharacterProfileImage() throws {
-        XCTAssertTrue(viewModel.fetchCharactreImageURL() == URL("https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"))
+        XCTAssertTrue(viewModel.fetchCharacterImageURL() == URL("https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"))
     }
 
     func testPerformanceExample() throws {

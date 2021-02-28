@@ -136,7 +136,7 @@ extension CharacterListVC: CharacterFilterVCDelegate {
     }
     
     func doneButtonTouched(appearanceID: [Int]?) {
-        let resultFound = viewModel.fetchFilteredResult(appearanceID: appearanceID)
+        let resultFound = viewModel.fetchCharacterSeasonResult(appearanceID: appearanceID)
         collectionView.setNoContentText(to:"")
         if !resultFound {
             showErrorMessage()

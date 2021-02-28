@@ -67,23 +67,23 @@ class CharacterListVMTests: XCTestCase {
     }
     
     func testFilterCharacterDetail() {
-        _ = viewModel.fetchFilteredResult(appearanceID: [1])
+        _ = viewModel.fetchCharacterSeasonResult(appearanceID: [1])
         let character = viewModel.fetchSelectedCharacter(selectedIndex: 0)
         XCTAssertTrue(character?.name == "Walter White")
     }
     
-    func testEmptyFetchFilteredResult() {
-        let isFound = viewModel.fetchFilteredResult(appearanceID: [])
+    func testEmptyFetchCharacterSeasonResult() {
+        let isFound = viewModel.fetchCharacterSeasonResult(appearanceID: [])
         XCTAssertFalse(!isFound)
     }
     
-    func testFetchFilteredResult() {
-        let isFound = viewModel.fetchFilteredResult(appearanceID: [4,5])
+    func testFetchCharacterSeasonResult() {
+        let isFound = viewModel.fetchCharacterSeasonResult(appearanceID: [4,5])
         XCTAssertTrue(isFound)
     }
     
     func testFetchSelectedAppearanceID(){
-        _ = viewModel.fetchFilteredResult(appearanceID: [3,4])
+        _ = viewModel.fetchCharacterSeasonResult(appearanceID: [3,4])
         guard let filteredIDs = viewModel.fetchSelectedAppearanceID() else {
             XCTAssertNil(nil)
             return
@@ -102,7 +102,7 @@ class CharacterListVMTests: XCTestCase {
     func testErrorMessage() {
         XCTAssertFalse(viewModel.searchCharacterByName(name: "XXXXXXXXXX"))
         XCTAssertEqual(viewModel.errorMessage(), NSLocalizedString("NoCharacterSearchResult", comment: ""))
-        _ = viewModel.fetchFilteredResult(appearanceID: [100])
+        _ = viewModel.fetchCharacterSeasonResult(appearanceID: [100])
         XCTAssertEqual(viewModel.errorMessage(), NSLocalizedString("NoCharacterFilterResult", comment: ""))
     }
     

@@ -15,6 +15,6 @@ protocol  CharacterListViewModelProtocol {
     func fetchSelectedCharacter(selectedIndex: Int) -> Character?
     func errorMessage() -> String
     func fetchSeasonAppearanceList() -> [Int]?
-    func fetchFilteredResult(appearanceID: [Int]?) -> Bool
+    func fetchCharacterSeasonResult(appearanceID: [Int]?) -> Bool
     func fetchSelectedAppearanceID() -> [Int]?
 }

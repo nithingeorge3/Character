@@ -20,12 +20,12 @@ class CharacterViewCellVMTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testFetchCharactreImageURL() {
-        let url = viewModel.fetchCharactreImageURL()
+    func testFetchCharacterImageURL() {
+        let url = viewModel.fetchCharacterImageURL()
         XCTAssertEqual(url, URL(string: "https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"))
         let character = Character(charID: 1, name: "George", birthday: nil, occupation: [], img: nil, status: nil, nickname: "Geo", appearance: [], portrayed: nil, category: nil, betterCallSaulAppearance: nil)
         viewModel = CharacterViewCellVM(character: character)
-        let emptyURL = viewModel.fetchCharactreImageURL()
+        let emptyURL = viewModel.fetchCharacterImageURL()
         XCTAssertTrue(emptyURL == URL(string: ""))
     }
 
