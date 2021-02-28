@@ -85,7 +85,7 @@ class CharacterListVMTests: XCTestCase {
     func testFetchSelectedAppearanceID(){
         _ = viewModel.fetchCharacterSeasonResult(appearanceID: [3,4])
         guard let filteredIDs = viewModel.fetchSelectedAppearanceID() else {
-            XCTAssertNil(nil)
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(filteredIDs[0] == 3, "Success")
@@ -93,7 +93,7 @@ class CharacterListVMTests: XCTestCase {
     
     func testFetchSeasonAppearanceList() {
         guard let ids = viewModel.fetchSeasonAppearanceList() else {
-            XCTAssertNil(nil)
+            XCTFail("nil value found")
             return
         }
         XCTAssert(ids == [1,2,3,4,5])

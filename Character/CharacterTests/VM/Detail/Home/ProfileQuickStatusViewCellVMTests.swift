@@ -23,7 +23,7 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
 
     func testFetchAppearanceValid() {
         guard let appearanceID = viewModel.fetchAppearance(index: 0) else {
-            XCTAssertNil(nil)
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue("\(appearanceID)" == "1", "found as 1")
@@ -67,7 +67,7 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
     
     func testFetchOccupation() {
         guard let occupation = viewModel.fetchOccupation(index: 0) else {
-           XCTAssertNil(nil, "empty or nil occupation found")
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(occupation.count > 0 && occupation == "Teenager")
@@ -75,7 +75,7 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
     
     func testFetchCharacterPersonalInfo1() {
         guard let occupation = viewModel.fetchCharacterPersonalInfo(index: 2) else {
-            XCTAssertNil(nil, "empty or nil occupation found")
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(occupation.count > 0 && occupation == "Teenager")
@@ -93,13 +93,13 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
         viewModel = ProfileQuickStatusViewCellVM(character: character, cellType: celltye)
         
         guard let birthDay = viewModel.fetchCharacterPersonalInfo(index: 3) else {
-            XCTAssertNil(nil, "empty or nil occupation found")
+            XCTFail("nil value found")
             return
         }
         XCTAssertTrue(birthDay.count > 0 && birthDay == "09-07-1958")
         
         guard let birthDay2 = viewModel.fetchCharacterPersonalInfo(index: 100) else {
-            XCTAssertNil(nil, "empty or nil occupation found")
+            XCTAssertNil(false, "empty or nil occupation found")
             return
         }
         XCTAssertTrue(birthDay2.count > 0 && birthDay2 == "09-07-1958")
@@ -111,13 +111,13 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
         viewModel = ProfileQuickStatusViewCellVM(character: character, cellType: celltye)
         
         guard let status = viewModel.fetchCharacterPersonalInfo(index: 4) else {
-            XCTAssertNil(nil, "empty or nil occupation found")
+            XCTAssertNil(false, "empty or nil occupation found")
             return
         }
         XCTAssertTrue(status.count > 0 && status == "Alive")
         
         guard let status2 = viewModel.fetchCharacterPersonalInfo(index: 100) else {
-            XCTAssertNil(nil, "empty or nil status found")
+            XCTAssertNil(false, "empty or nil status found")
             return
         }
         XCTAssertTrue(status2.count > 0 && status2 == "Alive")
