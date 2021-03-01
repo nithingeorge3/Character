@@ -26,7 +26,7 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
             XCTFail("nil value found")
             return
         }
-        XCTAssertTrue("\(appearanceID)" == "1", "found as 1")
+        XCTAssertTrue("\(appearanceID)" == NSLocalizedString("season1", comment: ""), "found")
     }
     
     func testFetchAppearanceInValid() {
@@ -121,6 +121,17 @@ class ProfileQuickStatusViewCellVMTests: XCTestCase {
             return
         }
         XCTAssertTrue(status2.count > 0 && status2 == "Alive")
+    }
+    
+    func testInvalidAppearanceID() {
+        let character = Character(charID: 1, name: "George", birthday: nil, occupation: [], img: "https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg", status: nil, nickname: "Geo", appearance: [1,2,3,4], portrayed: nil, category: nil, betterCallSaulAppearance: nil)
+        let celltye:CharacterDetailQuickStatusCellType = .appearance
+        viewModel = ProfileQuickStatusViewCellVM(character: character, cellType: celltye)
+        guard let _ = viewModel.fetchAppearance(index: 100) else {
+            XCTAssertTrue(true, "nil value")
+            return
+        }
+        XCTFail("value found")
     }
     
     func testPerformanceExample() throws {

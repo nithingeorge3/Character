@@ -79,8 +79,8 @@ class ProfileQuickStatusViewCellVM: ProfileQuickStatusViewCellVMProtocol {
     }
     
     func fetchAppearance(index: Int) -> String? {
-        if let appearance = character?.appearance?[safe:index] {
-            return "\(appearance)"
+        if let appearanceID = character?.appearance?[safe:index] {
+            return Helper.getAppearanceValue(apperanceID: appearanceID)
         }
         else {
             return nil

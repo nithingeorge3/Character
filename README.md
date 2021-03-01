@@ -30,7 +30,7 @@ Code and document for writing a Breaking Bad character app
 ## Requirements
 * iOS 13.0+
 * macOS 10.15+
-* Swift 5.1+
+* Swift 5+
 
 ## Installation
 
