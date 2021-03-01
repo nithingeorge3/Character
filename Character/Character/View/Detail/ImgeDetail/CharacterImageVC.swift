@@ -18,8 +18,12 @@ class CharacterImageVC: UIViewController {
         initUI()
     }
     
-    func prepareModel(viewModel: CharacterImageVM) {
-        self.viewModel = viewModel
+    internal static func instantiate(with viewModel: CharacterImageVMProtocol) -> CharacterImageVC? {
+        guard let vc = sb?.instantiateViewController(withIdentifier: "CharacterImageVC") as? CharacterImageVC else {
+            return nil
+        }
+        vc.viewModel = viewModel
+        return vc
     }
     
     func initUI() {

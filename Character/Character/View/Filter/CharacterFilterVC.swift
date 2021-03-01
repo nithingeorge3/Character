@@ -21,8 +21,12 @@ class CharacterFilterVC: UIViewController {
         prepareTableView()
     }
     
-    func prepareModel(viewModel: CharacterFilterVM) {
-        self.viewModel = viewModel
+    internal static func instantiate(with viewModel: CharacterFilterVMProtocol) -> CharacterFilterVC? {
+        guard let vc = sb?.instantiateViewController(withIdentifier: "CharacterFilterVC") as? CharacterFilterVC else {
+            return nil
+        }
+        vc.viewModel = viewModel
+        return vc
     }
     
     private func customNavBar() {
