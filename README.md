@@ -18,7 +18,7 @@ Code and document for writing a Breaking Bad character app
     - Profile Image
     
     <p align="center">
-      <img src="./Screenshot/targets.png" width="200" alt="VGS Show iOS SDK Aliases" hspace="10">img src="./Screenshot/home.png" width="200" alt="VGS Show iOS SDK Aliases" hspace="10"><img src="./Screenshot/detail.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/imageFull.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"><img src="./Screenshot/search.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/filter.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10">
+      <img src="./Screenshot/targets.png" width="200" alt="VGS Show iOS SDK Aliases" hspace="10"><img src="./Screenshot/home.png" width="200" alt="VGS Show iOS SDK Aliases" hspace="10"><img src="./Screenshot/detail.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/imageFull.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"><img src="./Screenshot/search.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/filter.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10">
     </p>
     
 ## Contributor
