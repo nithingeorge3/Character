@@ -1,7 +1,7 @@
 # Breaking Bad character explorer app
 **Version 1.0**
 
-Code and document for writing a Breaking Bad character app 
+Code and document for writing a Breaking Bad character app
  -  A list of Breaking Bad characters
     - Character profile image
     - Character name
@@ -17,6 +17,9 @@ Code and document for writing a Breaking Bad character app
 - Profile Image  
     - Profile Image
     
+    <p align="center">
+      <img src="./Screenshot/home.png" width="200" alt="VGS Show iOS SDK Aliases" hspace="10"><img src="./Screenshot/detail.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/imageFull.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"><img src="./Screenshot/search.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10"> <img src="./Screenshot/filter.png" width="200" alt="VGS Show iOS SDK Revealed Data" hspace="10">
+    </p>
     
 ## Contributor
 - Nithin George <nithingeorge3@gmail.com>
