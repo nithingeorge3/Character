@@ -117,6 +117,7 @@
 		28BBD48E25E5C78700AF9D8A /* CharacterFilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD48C25E5C78700AF9D8A /* CharacterFilterViewCell.swift */; };
 		28BBD49525E5CAD900AF9D8A /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD49425E5CAD900AF9D8A /* Delegate.swift */; };
 		28BBD49625E5CAD900AF9D8A /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBD49425E5CAD900AF9D8A /* Delegate.swift */; };
+		28D18F9F25EC5891005C2439 /* CharacterListVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D18F9E25EC5891005C2439 /* CharacterListVCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		28BBD48125E5B36400AF9D8A /* CharacterFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterVC.swift; sourceTree = "<group>"; };
 		28BBD48C25E5C78700AF9D8A /* CharacterFilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewCell.swift; sourceTree = "<group>"; };
 		28BBD49425E5CAD900AF9D8A /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		28D18F9E25EC5891005C2439 /* CharacterListVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListVCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				2849D7D625E545D90017F265 /* Services */,
+				28D18F9C25EC5870005C2439 /* View */,
 				2849D7E925E5461C0017F265 /* VM */,
 				2848938725E410BD00DB7426 /* CharacterTests.swift */,
 				2848938925E410BD00DB7426 /* Info.plist */,
@@ -622,6 +625,22 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		28D18F9C25EC5870005C2439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28D18F9D25EC5878005C2439 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28D18F9D25EC5878005C2439 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				28D18F9E25EC5891005C2439 /* CharacterListVCTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -853,6 +872,7 @@
 				285C215B25E83C6000751CFA /* CharacterImageVC.swift in Sources */,
 				2849D7E425E546160017F265 /* CharacterServicesMock.swift in Sources */,
 				28BBD48E25E5C78700AF9D8A /* CharacterFilterViewCell.swift in Sources */,
+				28D18F9F25EC5891005C2439 /* CharacterListVCTests.swift in Sources */,
 				28BBD48325E5B36400AF9D8A /* CharacterFilterVC.swift in Sources */,
 				28871DB625E87499005F881B /* CharacterViewCellVMTests.swift in Sources */,
 				284894A625E44CFA00DB7426 /* CharacterViewCell.swift in Sources */,

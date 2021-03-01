@@ -19,34 +19,39 @@ final class AppRouter {
         currentState = state
         switch state {
         case .start:
-            if let characterListVC = sb?.instantiateViewController(withIdentifier: "CharacterListVC") as? CharacterListVC  {
-                let navController = UINavigationController(rootViewController: characterListVC)
-                Helper.KeyWindow()?.rootViewController = navController
+            let viewModel = CharacterListVM(apiManager: CharacterServices())
+            guard let characterListVC = CharacterListVC.instantiate(with: viewModel)  else {
+                return
             }
+            let navController = UINavigationController(rootViewController: characterListVC)
+            Helper.KeyWindow()?.rootViewController = navController
         }
         Helper.KeyWindow()?.makeKeyAndVisible()
     }
 
     static func pushToCharacterDetailScreen(navigationConroller :UINavigationController, character: Character?) {
-        if let detailVC = sb?.instantiateViewController(withIdentifier: "CharacterDetailVC") as? CharacterDetailVC, let character = character  {
-            detailVC.character = character
-            navigationConroller.pushViewController(detailVC,animated: true)
+        let viewModel = CharacterDetailVM(character: character)
+        guard let detailVC = CharacterDetailVC.instantiate(with: viewModel, character: character) else {
+            return
         }
+        navigationConroller.pushViewController(detailVC,animated: true)
     }
     
     static func presentCharacterFilterView(delegate: CharacterFilterVCDelegate, appearanceList: [Int]?, selectedAppearanceID: [Int]?) {
-        if let filterVC = sb?.instantiateViewController(withIdentifier: "CharacterFilterVC") as? CharacterFilterVC, let appearanceList = appearanceList  {
-            filterVC.delegate = delegate
-            filterVC.prepareModel(viewModel: CharacterFilterVM(seasonAppearanceList: appearanceList, selectedID: selectedAppearanceID))
-            (delegate as! CharacterListVC).present(filterVC, animated: true, completion: nil)
+        let viewModel = CharacterFilterVM(seasonAppearanceList: appearanceList, selectedID: selectedAppearanceID)
+        guard let filterVC = CharacterFilterVC.instantiate(with: viewModel) else {
+            return
         }
+        filterVC.delegate = delegate
+        (delegate as! CharacterListVC).present(filterVC, animated: true, completion: nil)
     }
     
     static func showCharacterImageVC(navigationConroller: UINavigationController, character: Character?) {
-        if let imageVC = sb?.instantiateViewController(withIdentifier: "CharacterImageVC") as? CharacterImageVC, let character = character  {
-            imageVC.prepareModel(viewModel: CharacterImageVM(character: character))
-            navigationConroller.pushViewController(imageVC,animated: false)
+        let viewModel = CharacterImageVM(character: character)
+        guard let imageVC = CharacterImageVC.instantiate(with: viewModel) else {
+            return
         }
+        navigationConroller.pushViewController(imageVC,animated: false)
     }
 }
 

@@ -12,13 +12,12 @@ class CharacterListVC: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var apiManager: APICharacterProtocol = CharacterServices()
+    private var apiManager: APICharacterProtocol!
     private var viewModel: CharacterListViewModelProtocol!
     private let itemsPerRow: CGFloat = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CharacterListVM(apiManager: apiManager)
         prepareCollectionView()
         prepareSearchBar()
         setUpUI()
@@ -32,6 +31,14 @@ class CharacterListVC: UIViewController, UIGestureRecognizerDelegate {
         navigationController?.presentTransparentNavigationBar()
     }
 
+    internal static func instantiate(with viewModel: CharacterListViewModelProtocol) -> CharacterListVC? {
+        guard let vc = sb?.instantiateViewController(withIdentifier: "CharacterListVC") as? CharacterListVC else {
+            return nil
+        }
+        vc.viewModel = viewModel
+        return vc
+    }
+    
     func setCollectionLayout() {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0,right:0)

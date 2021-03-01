@@ -12,13 +12,11 @@ class CharacterDetailVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
     private var viewModel: CharacterDetailVMProtocol!
-    var character:Character?
+    private var character:Character?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CharacterDetailVM(character: character)
         setUpUI()
         prepareTableView()
     }
@@ -26,6 +24,15 @@ class CharacterDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.presentTransparentNavigationBar()
+    }
+    
+    internal static func instantiate(with viewModel: CharacterDetailVMProtocol, character: Character?) -> CharacterDetailVC? {
+        guard let vc = sb?.instantiateViewController(withIdentifier: "CharacterDetailVC") as? CharacterDetailVC else {
+            return nil
+        }
+        vc.viewModel = viewModel
+        vc.character = character
+        return vc
     }
     
     private func prepareTableView() {
