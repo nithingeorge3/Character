@@ -43,7 +43,7 @@ In Xcode:
 
 ## Architecture 
 * MVVM Architeture. Used Router for Navigation logic
-* Follwed TDD approch
+* Followed TDD approch
 
 ## Target
 
