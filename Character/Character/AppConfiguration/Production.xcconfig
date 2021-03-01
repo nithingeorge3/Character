@@ -10,5 +10,5 @@
 
 PRODUCT_NAME              = Character
 TARGET_NAME               = Character
-PRODUCT_BUNDLE_IDENTIFIER = com.gap
+PRODUCT_BUNDLE_IDENTIFIER = com.spice
 API_URL                   = https:/breakingbadapi.com/api
