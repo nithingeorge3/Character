@@ -18,13 +18,13 @@ Code and document for writing a Breaking Bad character app
     - Profile Image
     
     
-## Contributors
+## Contributor
 - Nithin George <nithingeorge3@gmail.com>
 
 - [Requirements](#requirements)
 - [Installation](#installation)
     - [Swift Package Manager](#swift-package-manager)
-- [Archetecture](#Archetecture)
+- [Architecture](#Architecture)
 - [Target](#Target)
     
 ## Requirements
@@ -41,8 +41,8 @@ In Xcode:
 * Use the URL https://github.com/Alamofire/Alamofire.git
 * Use the URL https://github.com/SDWebImage/SDWebImage.git
 
-## Archetecture
-* MVVM Archeteture with Router
+## Architecture 
+* MVVM Architeture. Used Router for Navigation logic
 * Follwed TDD approch
 
 ## Target
