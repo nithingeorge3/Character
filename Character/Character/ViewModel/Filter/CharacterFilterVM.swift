@@ -38,8 +38,8 @@ class CharacterFilterVM: CharacterFilterVMProtocol {
     func fetchFilterOptionID(index: Int) -> Int {
         return seasonAppearanceList?[index] ?? 0
     }
-    func fetchAppearance(index: Int) -> String {
-        return "\(seasonAppearanceList?[index] ?? 0)"
+    func fetchAppearance(apperanceID: Int) -> String {
+        return Helper.getAppearanceValue(apperanceID: apperanceID)
     }
     
     func fetchSelectedStatus(indexAppearanceID: Int) -> Bool {

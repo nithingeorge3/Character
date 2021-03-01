@@ -66,7 +66,7 @@ extension CharacterFilterVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterFilterViewCell", for:indexPath) as! CharacterFilterViewCell
         cell.selectionStyle = .none
         cell.delegate = self
-        cell.titleLabel.text = viewModel.fetchAppearance(index:indexPath.row)
+        cell.titleLabel.text = viewModel.fetchAppearance(apperanceID:viewModel.fetchFilterOptionID(index:indexPath.row))
         cell.selectionButton.tag = indexPath.row + 1
         cell.bottomSeparator.isHidden = (indexPath.row == (viewModel.numberOfRow() - 1))
         cell.selectionButton.isSelected = viewModel.fetchSelectedStatus(indexAppearanceID: viewModel.fetchFilterOptionID(index:indexPath.row))

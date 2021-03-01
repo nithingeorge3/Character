@@ -63,8 +63,8 @@ class CharacterFilterVMTests: XCTestCase {
     }
     
     func testFetchAppearance() {
-        let id = viewModel.fetchAppearance(index: 1)
-        XCTAssertTrue(id == "2")
+        let id = viewModel.fetchAppearance(apperanceID: 1)
+        XCTAssertTrue(id == NSLocalizedString("season1", comment: ""))
     }
     
     func testFetchSelectedStatus() {
