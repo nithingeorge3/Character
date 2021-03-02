@@ -69,7 +69,7 @@ class CharacterListVM: CharacterListViewModelProtocol {
         let activeCharacterList:[Character]? = lastSelectedUserFlow == .listCharacters ? characterList : filterCharacterList
         userFlow = .listSearchResult
         searchCharacterList?.removeAll()
-        if let results = activeCharacterList?.filter({ ($0.name?.contains(name) ?? false) }), results.count > 0 {
+        if let results = activeCharacterList?.filter({ ($0.name?.localizedCaseInsensitiveContains(name) ?? false) }), results.count > 0 {
             searchCharacterList = results
             return true
         }
